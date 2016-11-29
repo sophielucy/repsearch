@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+
+	<title> US Representative Search </title>
+</head>
+<body>
+	<h1 id="descrip"><strong> US Representative Search </strong></h1>
+	<p>Search for government representatives in your area</p>
+
+	<br>
+	<form id="search-form">
+		<input type="text" id="address" placeholder="Zip Code"/>
+	</form> 
+	<br>
+	<label><input type="checkbox" id="filterByOffice" value="true"> Include details about the representative's elected office</label><br>
+
+	<h4>Criteria:</h4>
+
+	<h4>Levels</h4>
+	<div id="levelFilter">
+		<label><input type="checkbox" id="filterByLevels" value="administrativeArea1"> Administrative Area 1</label><br>
+		<label><input type="checkbox" id="filterByLevels" value="administrativeArea2"> Administrative Area 2</label><br>
+		<label><input type="checkbox" id="filterByLevels" value="country"> Country</label><br>
+		<label><input type="checkbox" id="filterByLevels" value="international"> International</label><br>
+		<label><input type="checkbox" id="filterByLevels" value="locality"> Locality</label><br>
+		<label><input type="checkbox" id="filterByLevels" value="regional"> Regional</label><br>
+		<label><input type="checkbox" id="filterByLevels" value="special"> Special</label><br>
+		<label><input type="checkbox" id="filterByLevels" value="subLocality1"> Sub Locality 1</label><br>
+		<label><input type="checkbox" id="filterByLevels" value="subLocality2"> Sublocality 2</label><br>
+	</div>
+
+	<h4>Roles</h4>
+	<div id="roleFilter">
+		<label><input type="checkbox" id="filterByRoles" value="deputyHeadOfGovernment"> Deputy Head of Government</label><br>
+		<label><input type="checkbox" id="filterByRoles" value="executiveCouncil"> Executive Council</label><br>
+		<label><input type="checkbox" id="filterByRoles" value="governmentOfficer"> Government Officer</label><br>
+		<label><input type="checkbox" id="filterByRoles" value="headOfGovernment"> Head of Government</label><br>
+		<label><input type="checkbox" id="filterByRoles" value="headOfState"> Head of State</label><br>
+		<label><input type="checkbox" id="filterByRoles" value="highestCourtJudge"> Highest Court Judge</label><br>
+		<label><input type="checkbox" id="filterByRoles" value="judge"> Judge</label><br>
+		<label><input type="checkbox" id="filterByRoles" value="legislatorLowerBody"> Legislator Lower Body</label><br>
+		<label><input type="checkbox" id="filterByRoles" value="legislatorUpperBody"> Legislator Upper Body</label><br>
+		<label><input type="checkbox" id="filterByRoles" value="schoolBoard"> School Board</label><br>
+		<label><input type="checkbox" id="filterByRoles" value="specialPurposeOfficer"> Special Purpose Officer</label>
+	</div>
+
+	<br><br><br>
+	<button type="button" onclick="main(address, $('#filterByOffice').is(':checked'))" >Submit</button>
+	
+	<section id="results"></section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
